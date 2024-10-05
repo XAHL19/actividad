@@ -8,7 +8,7 @@ struct nodo {
     nodo *sig;
 };
 
-nodo *cab, *aux, *aux2;
+nodo *cab = NULL, *aux, *aux2;
 void registrarPasajero(){
 
     aux=(struct nodo*) malloc(sizeof(nodo));
@@ -36,12 +36,25 @@ void registrarPasajero(){
     }
 
 }
+void mostrarListaPasajeros(){
+    aux=cab;
+    cout<<"-------" <<endl;
+    while(aux!=NULL){
+        cout<<"Primer nombre: "<<aux->nombrePasajero<<endl;
+        cout<<"Documento: "<<aux->numeroDocumento<<endl;
+        cout<<"Destino: "<<aux->destino<<endl;
+        cout<<"-------"<<endl;
+
+        aux = aux->sig;
+    }
+
+}
 
 
 int main(){
     int opcion;
     do {
-        cout<<"Menu"<<endl<<"1. Resgistrar datos de los pasajeros"<<endl<<"2. Mostrar los pasajeros en la lista"<<endl;
+        cout<<"Menu"<<endl<<"1. Resgistrar datos de los pasajeros"<<endl<<"2. Mostrar los pasajeros en la lista"<<endl<<"3. Salir del programa"<<endl;
         cin>>opcion;
         switch (opcion)
         {
