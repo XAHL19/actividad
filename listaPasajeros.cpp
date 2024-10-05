@@ -8,7 +8,7 @@ struct nodo {
     nodo *sig;
 };
 
-nodo *cab = NULL, *aux, *aux2;
+nodo *cab = NULL, *aux= NULL, *aux2= NULL;
 void registrarPasajero(){
 
     aux=(struct nodo*) malloc(sizeof(nodo));
@@ -50,7 +50,6 @@ void mostrarListaPasajeros(){
 
 }
 
-
 int main(){
     int opcion;
     do {
@@ -60,6 +59,9 @@ int main(){
         {
         case 1:
             registrarPasajero();
+        break;
+        case 2:
+            mostrarListaPasajeros();
         break;
         case 3:
             cout << "Saliendo del programa"<<endl;
