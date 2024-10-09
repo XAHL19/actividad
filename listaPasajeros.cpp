@@ -83,8 +83,7 @@ void ordenarListaPorDestino(){
         aux2 = aux2->sig;
     }
 
-
-    cout<<" Lista ordenada por destino y documento: "<<endl;
+    cout<<"Lista ordenada por destino y documento: "<<endl;
     aux = cab;  
     while (aux != NULL) {  
         cout<< "Nombre: " <<aux->nombrePasajero <<endl;
